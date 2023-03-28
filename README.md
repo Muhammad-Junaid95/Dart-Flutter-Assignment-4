@@ -1,5 +1,5 @@
 # Dart-Flutter-Assignment-4
-In this repository we do some more complicated solutions of Dart
+In this repository we do some more complicated solutions of Dart.
 
 # Longest Subsequence of consecutive numbers
 Create a list of integers and find the longest subsequence of consecutive numbers in the list.
