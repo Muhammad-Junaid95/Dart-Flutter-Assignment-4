@@ -1,28 +1,28 @@
 //Create a list of strings and find the longest common subsequence (substring) among all the strings in the list.
 void main() {
-  List<String> strings = [
+  List<String> names = [
     'Ghazi Khalid bin Waleed',
     'Eurtugrul Ghazi',
     'Abdul Rehman Ghazi',
     'Usman Ghazi'
   ];
 
-  String longestCommonSubsequence = findLongestCommonSubsequence(strings);
+  String longestCommonSubsequence = findLongestCommonSubsequence(names);
   print("Longest Common Subsequence: $longestCommonSubsequence");
 }
 
-String findLongestCommonSubsequence(List<String> strings) {
-  int stringLength = strings.length;
-  String startingString = strings[0];
-  int startingStringLength = startingString.length;
+String findLongestCommonSubsequence(List<String> names) {
+  int namesLength = names.length;
+  String startingName = names[0];
+  int startingNameLength = startingName.length;
 
-  for (int i = startingStringLength; i >= 1; i--) {
-    for (int j = 0; j <= startingStringLength - i; j++) {
-      String substring = startingString.substring(j, j + i);
+  for (int i = startingNameLength; i >= 1; i--) {
+    for (int j = 0; j <= startingNameLength - i; j++) {
+      String substring = startingName.substring(j, j + i);
 
       bool isCommonSubsequence = true;
-      for (int k = 1; k < stringLength; k++) {
-        if (!strings[k].contains(substring)) {
+      for (int k = 1; k < namesLength; k++) {
+        if (!names[k].contains(substring)) {
           isCommonSubsequence = false;
           break;
         }
